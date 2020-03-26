@@ -1,6 +1,6 @@
 clear; clc;
 
-ORI = 7; %nr obiektu ró¿niczkuj¹cego idealnego
+ORI = 7; %nr obiektu rÃ³Â¿niczkujÂ¹cego idealnego
 
 T1 = 3; T2 = 1;
 k1 = 2; k2 = -3;
@@ -19,14 +19,14 @@ licz2_iner = [0,k2]; mian2_iner = [T2,1];
 [licz2,mian2] = series(licz2_iner,mian2_iner,licz_op,mian_op);
 
 nazwy = [
-         "Uk³ad inercyjny I rzêdu"
-         "Uk³ad inercyjny I rzêdu z opóŸnieniem"
-         "Uk³ad inercyjny II rzêdu"
-         "Uk³ad inercyjny II rzêdu oscylacyjny"
-         "Uk³ad ca³kuj¹cy idealny"
-         "Uk³ad ca³kuj¹cy rzeczywisty"
-         "Uk³ad ró¿niczkuj¹cy idealny"
-         "Uk³ad ró¿niczkuj¹cy rzeczywisty"
+         "UkÂ³ad inercyjny I rzÃªdu"
+         "UkÂ³ad inercyjny I rzÃªdu z opÃ³Å¸nieniem"
+         "UkÂ³ad inercyjny II rzÃªdu"
+         "UkÂ³ad inercyjny II rzÃªdu oscylacyjny"
+         "UkÂ³ad caÂ³kujÂ¹cy idealny"
+         "UkÂ³ad caÂ³kujÂ¹cy rzeczywisty"
+         "UkÂ³ad rÃ³Â¿niczkujÂ¹cy idealny"
+         "UkÂ³ad rÃ³Â¿niczkujÂ¹cy rzeczywisty"
          ];
 
 legendy = [
