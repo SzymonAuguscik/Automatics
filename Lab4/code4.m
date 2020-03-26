@@ -4,14 +4,14 @@ y_rzecz = obiekt_rzecz.y;
 SEC = 60;
 t = [1:SEC]';
 
-%Obiekt inercyjny I rzêdu z opóŸnieniem
+%Obiekt inercyjny I rzÃªdu z opÃ³Å¸nieniem
 
 %Metoda 2.1
 
 POINTS = 2;
 
 f = figure(1);
-f.Name = "Aproksymacja obiektem inercyjnym I rzêdu z opóŸnieniem";
+f.Name = "Aproksymacja obiektem inercyjnym I rzÃªdu z opÃ³Å¸nieniem";
 figure(f)
 plot(t,y_rzecz)
 
@@ -36,15 +36,15 @@ grid()
 title("Step response")
 xlabel("Time")
 ylabel("Amplitude")
-legend("Rzeczywistoœæ","Aproksymacja")
+legend("RzeczywistoÅ“Ã¦","Aproksymacja")
 e = y_rzecz - y_iner;
 blad = sum(e.^2)/length(e);
-disp("Obiekt inercyjny I rzêdu z opóŸnieniem:")
+disp("Obiekt inercyjny I rzÃªdu z opÃ³Å¸nieniem:")
 disp("  Metoda 2.1")
 disp("    k = " + num2str(k))
 disp("    T = " + num2str(T))
 disp("    theta = " + num2str(theta))
-disp("    B³¹d = " +num2str(blad))
+disp("    BÂ³Â¹d = " +num2str(blad))
 
 %Metoda 2.4
 
@@ -53,9 +53,9 @@ disp("  Metoda 2.4")
 disp("    k = " + num2str(parametry(1)))
 disp("    T = " + num2str(parametry(2)))
 disp("    theta = " + num2str(parametry(3)))
-disp("    B³¹d = " + num2str(blad))
+disp("    BÂ³Â¹d = " + num2str(blad))
 
-%Obiekt inercyjny II rzêdu z opóŸnieniem
+%Obiekt inercyjny II rzÃªdu z opÃ³Å¸nieniem
 
 %Metoda 2.2
 
@@ -64,7 +64,7 @@ RATIO_CONST = 0.1;
 TIME_CONST = 1.2;
 COEFS = [0.26 0.2 0.174 0.15 0.135 0.131 0.126 0.125 0.124 0.123 0.122]';
 
-t_tmp = [1:SEC-round(theta)]';            %usuniêcie opóŸnienia
+t_tmp = [1:SEC-round(theta)]';            %usuniÃªcie opÃ³Å¸nienia
 y_tmp = y_rzecz(floor(theta):SEC);
 y_a = GAIN_CONST*k;
 
@@ -94,23 +94,23 @@ set(obiekt,'outputdelay',theta);
 y_iner = step(obiekt,t);
 
 f = figure(2);
-f.Name = "Aproksymacja obiektem inercyjnym II rzêdu z opóŸnieniem - metoda 2.2";
+f.Name = "Aproksymacja obiektem inercyjnym II rzÃªdu z opÃ³Å¸nieniem - metoda 2.2";
 figure(f)
 plot(t,y_rzecz,t,y_iner)
 grid()
 title("Step response")
 xlabel("Time")
 ylabel("Amplitude")
-legend("Rzeczywistoœæ","Aproksymacja")
+legend("RzeczywistoÅ“Ã¦","Aproksymacja")
 e = y_rzecz - y_iner;
 blad = sum(e.^2)/length(e);
-disp("Obiekt inercyjny II rzêdu z opóŸnieniem:")
+disp("Obiekt inercyjny II rzÃªdu z opÃ³Å¸nieniem:")
 disp("  Metoda 2.2")
 disp("    k = " + num2str(k))
 disp("    T1 = " + num2str(T1))
 disp("    T2 = " + num2str(T2))
 disp("    theta = " + num2str(theta))
-disp("    B³¹d = " +num2str(blad))
+disp("    BÂ³Â¹d = " +num2str(blad))
 
 %Metoda 2.3
 
@@ -142,13 +142,13 @@ set(obiekt,'outputdelay',theta);
 y_iner = step(obiekt,t);
 
 f = figure(3);
-f.Name = "Aproksymacja obiektem inercyjnym II rzêdu z opóŸnieniem - metoda 2.3";
+f.Name = "Aproksymacja obiektem inercyjnym II rzÃªdu z opÃ³Å¸nieniem - metoda 2.3";
 plot(t,y_rzecz,t,y_iner)
 grid()
 title("Step response")
 xlabel("Time")
 ylabel("Amplitude")
-legend("Rzeczywistoœæ","Aproksymacja")
+legend("RzeczywistoÅ“Ã¦","Aproksymacja")
 e = y_rzecz - y_iner;
 blad = sum(e.^2)/length(e);
 disp("  Metoda 2.3")
@@ -156,7 +156,7 @@ disp("    k = " + num2str(k))
 disp("    T1 = " + num2str(T1))
 disp("    T2 = " + num2str(T2))
 disp("    theta = " + num2str(theta))
-disp("    B³¹d = " +num2str(blad))
+disp("    BÂ³Â¹d = " +num2str(blad))
 
 %Metoda 2.4
 
@@ -166,18 +166,18 @@ disp("    k = " + num2str(parametry(1)))
 disp("    T1 = " + num2str(parametry(2)))
 disp("    T2 = " + num2str(parametry(3)))
 disp("    theta = " + num2str(parametry(4)))
-disp("    B³¹d = " + num2str(blad))
+disp("    BÂ³Â¹d = " + num2str(blad))
 
-%Obiekt wieloinercyjny bez opóŸnienia
+%Obiekt wieloinercyjny bez opÃ³Å¸nienia
 
 %Metoda 2.4
 
 n = 3;
 
 [parametry, blad] = fminsearch('identC',[k T n]);
-disp("Obiekt wieloinercyjny bez opóŸnieñ:")
+disp("Obiekt wieloinercyjny bez opÃ³Å¸nieÃ±:")
 disp("  Metoda 2.4")
 disp("    k = " + num2str(parametry(1)))
 disp("    T = " + num2str(parametry(2)))
 disp("    n = " + num2str(round(parametry(3))))
-disp("    B³¹d = " + num2str(blad))
+disp("    BÂ³Â¹d = " + num2str(blad))
