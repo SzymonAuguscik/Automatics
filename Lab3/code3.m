@@ -17,8 +17,8 @@ p = getoptions(h);
 p.FreqUnits = 'Hz';
 p.ShowFullContour = 'off';
 setoptions(h,p)
-%Uk³ad nr 1 - stabilny
-%Uk³ad nr 2 - niestabilny
+%UkÂ³ad nr 1 - stabilny
+%UkÂ³ad nr 2 - niestabilny
 
 %Zadanie 2.4
 
@@ -31,7 +31,7 @@ p.FreqUnits = 'Hz';
 p.ShowFullContour = 'off';
 setoptions(h,p)
 legend("Dwa bieguny","Trzy bieguny")
-%Dodawanie biegunów zmniejsza zapas stabilnoœci
+%Dodawanie biegunÃ³w zmniejsza zapas stabilnoÅ“ci
 
 %Zadanie 2.5
 
@@ -48,7 +48,7 @@ for i = 1:4
     setoptions(h,q)
     p = [p 0];
 end
-%Dodawanie biegunów powoduje utratê stabilnoœci
+%Dodawanie biegunÃ³w powoduje utratÃª stabilnoÅ“ci
 
 %Zadanie 2.6
 
@@ -61,4 +61,4 @@ q.FreqUnits = 'Hz';
 q.ShowFullContour = 'off';
 setoptions(h,q)
 legend("Brak zer", "Jedno zero")
-%Dodawanie zer zwiêksza zapas stabilnoœci
+%Dodawanie zer zwiÃªksza zapas stabilnoÅ“ci
