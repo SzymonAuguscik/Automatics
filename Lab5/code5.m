@@ -34,8 +34,8 @@ disp("K = "+num2str(K))
 LIMIT = 5;
 
 [licz,mian] = zp2tf([],[0 -1 -5],5);
-G_o1 = tf(licz,mian);                        %G_o1 - uk³ad otwarty(2a)
-G_z1 = feedback(G_o1,1);                     %G_z1 - uk³ad zamkniêty(2a)
+G_o1 = tf(licz,mian);                        %G_o1 - ukÅ‚ad otwarty(2a)
+G_z1 = feedback(G_o1,1);                     %G_z1 - ukÅ‚ad zamkniÄ™ty(2a)
 
 figure(4)
 rlocus(G_o1)
@@ -48,8 +48,8 @@ sgrid()
 
 [licz,mian] = zp2tf(-1,-10,10);
 G_c = tf(licz,mian);                         %G_c - kompensator
-G_o2 = series(G_c,G_o1);                     %G_o2 - uk³ad otwarty(2b)
-G_z2 = feedback(G_o2,1);                     %G_z2 - uk³ad zamkniêty(2b)
+G_o2 = series(G_c,G_o1);                     %G_o2 - ukÅ‚ad otwarty(2b)
+G_z2 = feedback(G_o2,1);                     %G_z2 - ukÅ‚ad zamkniÄ™ty(2b)
 
 figure(5)
 rlocus(G_o2)
@@ -64,6 +64,6 @@ step(G_z1,G_z2)
 grid()
 legend("Obiekt bez kompensatora","Obiekt z kompensatorem")
 
-%Obiekt z kompensatorem jest lepszy. Szybciej osi¹ga wartoœæ ustalon¹, a
-%ponadto mo¿na zaobserwowaæ mniej oscylacji wzglêdem uk³adu bez
+%Obiekt z kompensatorem jest lepszy. Szybciej osiÄ…ga wartoÅ›Ä‡ ustalonÄ…, a
+%ponadto moÅ¼na zaobserwowaÄ‡ mniej oscylacji wzglÄ™dem ukÅ‚adu bez
 %kompensatora.
