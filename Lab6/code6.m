@@ -2,7 +2,7 @@ clear;clc;
 
 %Zadanie 1.
 
-%wspÛ≥czynniki z podstawowej metody Z-N
+%wsp√≥≈Çczynniki z podstawowej metody Z-N
 COEF_P1 = 0.5;
 
 COEF_P2 = 0.45;
@@ -26,9 +26,9 @@ axis([-LIMIT LIMIT -LIMIT LIMIT])
 P1 = K_kr;
 
 sim('P_controller.slx');
-%open_system('P_controller/Scope') - do okreúlenia P_kr
+%open_system('P_controller/Scope') - do okre≈õlenia P_kr
 
-P_kr = 3.7; %odczytane z wykresu z symulacji wyøej
+P_kr = 3.7; %odczytane z wykresu z symulacji wy≈ºej
 
 %regulator P
 P1 = COEF_P1*K_kr;
@@ -45,7 +45,7 @@ open_system('P_PI_PID/Scope')
 
 %Zadanie 2.
 
-%wspÛ≥czynniki ze zmodyfikowanej metody Z-N
+%wsp√≥≈Çczynniki ze zmodyfikowanej metody Z-N
 COEF_P1 = 0.6;
 COEF_I1 = 2;
 COEF_D1 = 8;
