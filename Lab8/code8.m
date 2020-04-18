@@ -17,7 +17,7 @@ ylabel('MO [%]'), xlabel('\xi')
 disp("Zaznacz PM dla ksi = "+num2str(ksi_k))
 ezplot('atand(2*ksi/sqrt(sqrt(1+4*ksi^2)-2*ksi^2))',[0 1])
 ylabel('PM [deg]'), xlabel('\xi')
-[~,PM_k] = ginput(1);             %dla ksi_k odczytanego wyøej
+[~,PM_k] = ginput(1);             %dla ksi_k odczytanego wy≈ºej
 
 [~,PM_bk] = margin(licz_bk, mian_bk);
 
@@ -26,7 +26,7 @@ a = (1+sind(phi))/(1-sind(phi));
 
 A = -10*log(a);
 
-disp("Zaznacz omegÍ dla A = "+num2str(A))
+disp("Zaznacz omegƒô dla A = "+num2str(A))
 margin(licz_bk,mian_bk)
 [omega,x] = ginput(1);             %dla Magn
 
@@ -36,23 +36,23 @@ K = a;
 p = 1/T_k;
 z = 1/(a*T_k);
 
-G_bk = tf(licz_bk,mian_bk);        %uk≥ad bez kompensacji
+G_bk = tf(licz_bk,mian_bk);        %uk≈Çad bez kompensacji
 
-[licz_k,mian_k] = zp2tf(-z,-p,K);    %uk≥ad z kompensacjπ
+[licz_k,mian_k] = zp2tf(-z,-p,K);    %uk≈Çad z kompensacjƒÖ
 G_c = tf(licz_k,mian_k);
 G_k = series(G_bk,G_c);           
 
-G_k = feedback(G_k,1);             %zamykanie uk≥adÛw
+G_k = feedback(G_k,1);             %zamykanie uk≈Çad√≥w
 G_bk = feedback(G_bk,1);
 
 figure(2)
 step(G_bk)
 xlabel("t")
 ylabel("y(t)")
-title("Odpowiedü skokowa uk≥adu bez kompensacji")
+title("Odpowied≈∫ skokowa uk≈Çadu bez kompensacji")
 
 figure(3)
 step(G_k)
 xlabel("t")
 ylabel("y(t)")
-title("Odpowiedü skokowa uk≥adu z kompensacjπ")
+title("Odpowied≈∫ skokowa uk≈Çadu z kompensacjƒÖ")
