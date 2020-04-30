@@ -4,10 +4,10 @@ licz = [0,1];
 A = [2,7,6,1];
 B = [6,7,2,0.5];
 
-legenda = [ "- ca³ka z kwadratu b³êdu"
-           "- ca³ka z s. kw. b. i w. kw. p. b."
-           "- ca³ka z modu³u regulacji"
-           "- kryterium czêstotliwoœciowe" ];
+legenda = [ "- caÂ³ka z kwadratu bÂ³Ãªdu"
+           "- caÂ³ka z s. kw. b. i w. kw. p. b."
+           "- caÂ³ka z moduÂ³u regulacji"
+           "- kryterium czÃªstotliwoÅ“ciowe" ];
 %OPARE
 K =  [7, 6.372,  6.371,  4.891, 31.667, 28.895, 28.859, 18.122, 7, 6.685,  6.683,  3.618, -0.667, -0.671, -0.756, -0.803];
 alfa = [4, 3.175, 3.733, 1.778, 5.444, 4.207, 4.197, 2.659, 0.444, 0.404, 0.404, 0.25, 0.028, 0.027, 0.025, 0.019];
@@ -15,7 +15,7 @@ beta = 0.5;
 
 for i = 1:4
     f = figure(6*i-5);
-    f.Name = 'Charakterystyki: skokowa i czêstotliwoœciowa dla uk³adu otwartego';
+    f.Name = 'Charakterystyki: skokowa i czÃªstotliwoÅ“ciowa dla ukÂ³adu otwartego';
     figure(f);
     
     mian = [1,A(i),B(i),1];
@@ -30,7 +30,7 @@ for i = 1:4
     subplot(2,2,[3,4])
     bode(G_o)
     
-    disp("Dla obiektu "+num2str(i)+" uzyska³em nastêpuj¹ce parametry optymalne:")
+    disp("Dla obiektu "+num2str(i)+" uzyskaÂ³em nastÃªpujÂ¹ce parametry optymalne:")
     disp(legenda(1)+": K = "+num2str(K(4*i-3))+" alfa = "+num2str(alfa(4*i-3)))
     disp(legenda(2)+": K = "+num2str(K(4*i-2))+" alfa = "+num2str(alfa(4*i-2))+" dla bety = "+num2str(beta))
     disp(legenda(3)+": K = "+num2str(K(4*i-1))+" alfa = "+num2str(alfa(4*i-1)))
