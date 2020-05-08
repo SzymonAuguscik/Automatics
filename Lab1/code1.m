@@ -3,8 +3,8 @@ clear; clc;
 % Zadanie 1
 % a)
 % bieguny - nie
-% stabilnoÅ›Ä‡ - tak
-% ukÅ‚ad nieminifazowalny - nie
+% stabilnoœæ - tak
+% uk³ad nieminifazowalny - nie
 
 licz = [0 0 1];
 mian1 = [1000 500 400];
@@ -32,6 +32,7 @@ step(t2)
 M = 1000;
 a = 500;
 c = 400;
+F = 1000;
 
 sim('model1.slx');
 
@@ -48,7 +49,7 @@ figure(4)
 step(A1,B1,C1,D1)
 figure(5)
 step(A2,B2,C2,D2)
-% Macierze nie sÄ… takie same, jednak odpowiedzi skokowe juÅ¼ tak
+% Macierze nie s¹ takie same, jednak odpowiedzi skokowe ju¿ tak
 
 % Zadanie 5
 
@@ -58,7 +59,7 @@ k = 1;
 
 [licz,mian] = zp2tf(z,p,k);
 [z1,p1,k1] = tf2zp(licz,mian);
-% PojawiajÄ… siÄ™ liczby zespolone o czÄ™Å›ci rzeczywistej zbliÅ¼onej do -1
+% Pojawiaj¹ siê liczby zespolone o czêœci rzeczywistej zbli¿onej do -1
 
 % Zadanie 6
 
