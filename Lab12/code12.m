@@ -19,7 +19,7 @@ for i=1:MAX
 
     subplot(1,2,1)
     plot(t,x(:,1))
-    legend("Objêtoœæ cieczy")
+    legend("ObjÃªtoÅ“Ã¦ cieczy")
     
     subplot(1,2,2)
     plot(t,x(:,2))
@@ -68,9 +68,9 @@ for i=1:MAX
     
     subplot(2,2,3)
     plot(t,x(:,1)-y(:,1))
-    legend("B³¹d objêtoœci")
+    legend("BÂ³Â¹d objÃªtoÅ“ci")
     
     subplot(2,2,4)
     plot(t,x(:,2)-y(:,2))
-    legend("B³¹d temperatury")
+    legend("BÂ³Â¹d temperatury")
 end
